@@ -48,10 +48,10 @@ function creaCalendari($mes,$any ,$festius = array()){
       while($dia<=$diaf){    
 
         
-            $calendari=$calendari."<td "; if($dia==$avui){ $calendari=$calendari. 'class="avui" ';} else if(in_array($dia,$festius)){ $calendari=$calendari. 'class="festa" ';} $calendari=$calendari.">"; 
-            if($dia<=$diaf){  $calendari=$calendari.$dia; $dia++;} 
-            
-            $calendari=$calendari.'</td>';
+        $calendari=$calendari."<td "; if(!in_array($dia,$festius)){$calendari=$calendari."<button "; if($dia==$avui){ $calendari=$calendari. 'class="avui" ';} }else{ $calendari=$calendari. 'class="festa" ';} $calendari=$calendari.">"; 
+        if($dia<=$diaf){  $calendari=$calendari.$dia; $dia++;} 
+        if(!in_array($dia,$festius)){$calendari=$calendari."</button>";   }
+        $calendari=$calendari.'</td>';
            
             
           if($i%7==0){
