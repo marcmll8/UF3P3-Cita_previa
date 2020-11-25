@@ -1,0 +1,16 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.contene{
+    width: 100%;
+    background-color: violet;
+    height: 100px;
+}
+
+.titulito{
+   padding-top:20px;
+}
