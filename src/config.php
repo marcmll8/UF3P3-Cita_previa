@@ -1,7 +1,7 @@
 <?php
 define("RUTA_PER_DEFECTE", 0);
 
-$config = array();
+
 
 /* configuració de connexió a la base dades */
 $config["db"] = array();

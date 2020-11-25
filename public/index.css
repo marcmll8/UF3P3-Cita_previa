@@ -7,10 +7,33 @@
 
 .contene{
     width: 100%;
-    background-color: violet;
+    background-color:violet;
     height: 100px;
 }
 
+
 .titulito{
+    margin-left: 20px;
    padding-top:20px;
+}
+
+.calendariro{
+    margin-top:100px;
+   margin-left: 5%;
+   margin-right: 5%;
+}
+
+.calendari{
+
+text-align: center;
+width: 90%;
+border:1px solid black;
+border-collapse: collapse;
+}
+
+.calendari td{
+    border:1px solid black;
+}
+.calendari tr{
+    border:1px solid black; 
 }

@@ -35,21 +35,11 @@ function creaCalendari($mes,$any ,$festius = array()){
        }
       else{
         
-        $calendari=$calendari."<td "; if(!in_array($dia,$festius)){$calendari=$calendari."><button "; if($dia==$avui){ $calendari=$calendari. 'class="avui" ';} }else{ $calendari=$calendari. 'class="festa" ';} $calendari=$calendari.">"; 
-        if($dia<=$diaf){  $calendari=$calendari.$dia; $dia++;} 
-        if(!in_array($dia,$festius)){$calendari=$calendari."</button>";}
-          $calendari=$calendari.'</td>';
-        }
-      
-    }
-    $calendari=$calendari ."</tr>";
-     
-    while($dia<=$diaf){    
+        else{ $calendari=$calendari. 'class="festa" ';} $calendari=$calendari.">"; 
 
-      
-      $calendari=$calendari."<td ";if(!in_array($dia,$festius)){$calendari=$calendari."><button "; if($dia==$avui){ $calendari=$calendari. 'class="avui" ';} }else{ $calendari=$calendari. 'class="festa" ';} $calendari=$calendari.">"; 
-      if($dia<=$diaf){  $calendari=$calendari.$dia; $dia++;} 
-      if(!in_array($dia,$festius)){$calendari=$calendari."</button>";}
+        if($dia<=$diaf){  $calendari=$calendari.$dia; $dia++;} 
+
+        if(!in_array($dia,$festius)){$calendari=$calendari."</button>";   }
         $calendari=$calendari.'</td>';
           
         if($i%7==0){
