@@ -9,56 +9,54 @@ include "config.php";
  * @return void
  */
 function creaCalendari($mes,$any ,$festius = array()){
-    $date=new DateTime();
-    $diaini=new DateTime("$any-$mes-1");
-    $diaf = $date->format("t");
-    $avui=$date->format("j");
-    $diai = $diaini->format("N");
-    $calendari="";
-
-         $calendari=$calendari . '<table class="calendari">
-            <tr>
-            <th>Dill</th>
-            <th>Dima</th>
-            <th>Dime</th>
-            <th>Dijo</th>
-            <th>Dive</th>
-            <th>Disa</th>
-            <th>Dium</th>
-            </tr>';        
-            $dia=1;
-            $i=0; $calendari=$calendari ."<tr>";
-      for($i=1;$i<8;$i++){
-       
-        if($i<$diai){
-          $calendari=$calendari."<td></td>";
-         }
-        else{
-          
-          $calendari=$calendari."<td "; if(!in_array($dia,$festius)){$calendari=$calendari."<button "; if($dia==$avui){ $calendari=$calendari. 'class="avui" ';} }else{ $calendari=$calendari. 'class="festa" ';} $calendari=$calendari.">"; 
-          if($dia<=$diaf){  $calendari=$calendari.$dia; $dia++;} 
-          if(!in_array($dia,$festius)){$calendari=$calendari."</button>";   }
-          $calendari=$calendari.'</td>';
-         
-          }
+  $date=new DateTime();
+  $diaini=new DateTime("$any-$mes-1");
+  $diaf = $date->format("t");
+  $avui=$date->format("j");
+  $diai = $diaini->format("N");
+  $calendari="";
+       $calendari=$calendari . '<table class="calendari">
+          <tr>
+          <th>Dill</th>
+          <th>Dima</th>
+          <th>Dime</th>
+          <th>Dijo</th>
+          <th>Dive</th>
+          <th>Disa</th>
+          <th>Dium</th>
+          </tr>';        
+          $dia=1;
+          $i=0; 
+          $calendari=$calendari ."<tr>";
+    for($i=1;$i<8;$i++){
+     
+      if($i<$diai){
+        $calendari=$calendari."<td></td>";
+       }
+      else{
         
-      }
-      $calendari=$calendari ."</tr>";
-       
-      while($dia<=$diaf){    
-
-        
-        $calendari=$calendari."<td "; if(!in_array($dia,$festius)){$calendari=$calendari."<button "; if($dia==$avui){ $calendari=$calendari. 'class="avui" ';} }else{ $calendari=$calendari. 'class="festa" ';} $calendari=$calendari.">"; 
+        $calendari=$calendari."<td "; if(!in_array($dia,$festius)){$calendari=$calendari."><button "; if($dia==$avui){ $calendari=$calendari. 'class="avui" ';} }else{ $calendari=$calendari. 'class="festa" ';} $calendari=$calendari.">"; 
         if($dia<=$diaf){  $calendari=$calendari.$dia; $dia++;} 
-        if(!in_array($dia,$festius)){$calendari=$calendari."</button>";   }
+        if(!in_array($dia,$festius)){$calendari=$calendari."</button>";}
+          $calendari=$calendari.'</td>';
+        }
+      
+    }
+    $calendari=$calendari ."</tr>";
+     
+    while($dia<=$diaf){    
+
+      
+      $calendari=$calendari."<td ";if(!in_array($dia,$festius)){$calendari=$calendari."><button "; if($dia==$avui){ $calendari=$calendari. 'class="avui" ';} }else{ $calendari=$calendari. 'class="festa" ';} $calendari=$calendari.">"; 
+      if($dia<=$diaf){  $calendari=$calendari.$dia; $dia++;} 
+      if(!in_array($dia,$festius)){$calendari=$calendari."</button>";}
         $calendari=$calendari.'</td>';
-           
-            
-          if($i%7==0){
-            $calendari=$calendari.'</tr>';
-          }
-            
-          $i++;}
-          $calendari=$calendari.'</table>';
-          return $calendari;
-}
+          
+        if($i%7==0){
+          $calendari=$calendari.'</tr>';
+        }
+          
+        $i++;}
+        $calendari=$calendari.'</table>';
+        return $calendari;
+      }
