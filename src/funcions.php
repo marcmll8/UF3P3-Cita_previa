@@ -60,3 +60,4 @@ function creaCalendari($mes,$any ,$festius = array()){
         $calendari=$calendari.'</table>';
         return $calendari;
       }
+
