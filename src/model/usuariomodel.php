@@ -1,5 +1,3 @@
-<!--kristhel-->
-
 <?php
 
 class usuariomodel
