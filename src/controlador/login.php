@@ -1,5 +1,3 @@
-<!--Kristhel-->
-
 <?php
 
 function ctrlogin($peticio, $resposta, $config)

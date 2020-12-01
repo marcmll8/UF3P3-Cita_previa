@@ -24,7 +24,7 @@ function creaCalendari($mes,$any ,$festius = array()){
           <th>Dive</th>
           <th>Disa</th>
           <th>Dium</th>
-          </tr>';        
+          </tr>';
           $dia=1;
           $i=0; 
           $calendari=$calendari ."<tr>";
