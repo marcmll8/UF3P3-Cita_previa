@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1ff9a71...  primer commit vista cita
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,15 +10,12 @@
     <body class="bodyInici">
         <div class="contene">
              <div class="titulito"><h1>Cita Previa</h1></div>
-<<<<<<< HEAD
-=======
-             <div class="calendariro">
+             <div class="calendaritro">
             <?php echo($calendari); ?>
 
 </div>
->>>>>>> 1ff9a71...  primer commit vista cita
                 
-                    <?php echo($calendari);?>
+              
                     
                     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

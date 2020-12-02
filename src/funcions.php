@@ -34,9 +34,11 @@ function creaCalendari($mes,$any ,$festius = array()){
           
           $calendari=$calendari."<td></td>";
          }
+
         else{
+          $diaActual = $diaini -> format("Y-m-d");
           
-          $calendari=$calendari."<td "; if(!in_array($dia,$festius)){$calendari=$calendari."><a href='index.php?r=citaHora&m=$dia'"; if($dia==$avui){ $calendari=$calendari. 'class="avui" ';} }
+           $calendari=$calendari."<td "; if(!in_array($diaActual,$festius)){$calendari=$calendari."><a href='../public/index.php?r=citahora&m=$diaActual'"; if($dia==$avui){ $calendari=$calendari. 'class="avui" ';} }
           
           else{ $calendari=$calendari. 'class="festa" ';} $calendari=$calendari.">"; 
 
@@ -45,7 +47,8 @@ function creaCalendari($mes,$any ,$festius = array()){
           if(!in_array($dia,$festius)){$calendari=$calendari."</a>";   }
 
           $calendari=$calendari.'</td>';
-         
+                   $diaini -> modify("+1 day");
+
           }
         
       }
@@ -53,16 +56,20 @@ function creaCalendari($mes,$any ,$festius = array()){
        
       while($dia<=$diaf){    
 
-        
-        $calendari=$calendari."<td "; if(!in_array($dia,$festius)){$calendari=$calendari."><a href='index.php?r=citaHora&m=$dia'"; if($dia==$avui){ $calendari=$calendari. 'class="avui" ';} }
+        $diaActual = $diaini -> format("Y-m-d");
+
+        $calendari=$calendari."<td "; if(!in_array($diaActual,$festius)){$calendari=$calendari."><a href='../public/index.php?r=citahora&m=$diaActual'"; if($dia==$avui){ $calendari=$calendari. 'class="avui" ';} }
         
         else{ $calendari=$calendari. 'class="festa" ';} $calendari=$calendari.">"; 
 
         if($dia<=$diaf){  $calendari=$calendari.$dia; $dia++;} 
 
-        if(!in_array($dia,$festius)){$calendari=$calendari."</a>";   }
+        
+        if(!in_array($diaActual,$festius)){$calendari=$calendari."</a>";   }
         $calendari=$calendari.'</td>';
-          
+
+        $diaini -> modify("+1 day");
+        
         if($i%7==0){
           $calendari=$calendari.'</tr>';
         }

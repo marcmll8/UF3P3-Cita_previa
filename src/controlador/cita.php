@@ -1,13 +1,14 @@
 <?php 
-include "../funcions.php";
-
-
 
 function ctrlCita($peticio, $resposta, $config)
 { 
+    $festiusito=new festiusmodel($config["db"]);
+    $festius = $festiusito -> mostrartots();
     $data=new DateTime();
+    $any = $data -> format("y");
     $mesActual = $data -> format("n");
-    $calendarito = creaCalendari($mes,$any,$festius[$mesActual]);
+
+    $calendarito = creaCalendari($mesActual,$any,$festius);
 
     $error = $peticio->get("SESSION", "error");
 
