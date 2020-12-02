@@ -1,4 +1,3 @@
-
 <?php
 function ctrlvalidarlogin($peticio, $resposta,$config)
 {   //KRISTHEL

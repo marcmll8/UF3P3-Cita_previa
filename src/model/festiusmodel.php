@@ -32,7 +32,11 @@ class festiusmodel
     public function mostrartots(){
         $stm2 = $this->sql->prepare('select data from dies_festius;');
         $result2 = $stm2->execute();
-        $dies = $query->fetchAll(\PDO::FETCH_ASSOC);
+        $dies = array();
+        while($dia = $stm2->fetch(\PDO::FETCH_ASSOC)){
+                $dies[] = $dia["data"];
+        } 
+      
         return $dies;
     }
     public function esborrartots(){
