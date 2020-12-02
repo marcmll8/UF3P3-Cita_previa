@@ -1,6 +1,6 @@
 <?php
 
-class modelfestius
+class festiusmodel
 {
 
     private $sql;
@@ -13,7 +13,7 @@ class modelfestius
      * @param array $config paràmetres de configurció del model
      *
     **/
-    public function conecta()
+    public function __construct($config)
     {
         $dsn = 'mysql:dbname=cita_previa;host=localhost';
         $usuari = 'cita_previa';
@@ -25,9 +25,9 @@ class modelfestius
         }
     }
     public function afegirfestiu($dia){
-        $stm2 = $this->sql->prepare('insert into dies_festius values (:data);');
+        $stm2 = $this->sql->prepare('insert into dies_festius (data) values (:data);');
         $result2 = $stm2->execute([':data' =>$dia]);
-
+        echo($dia);
     }
     public function mostrartots(){
         $stm2 = $this->sql->prepare('select data from dies_festius;');

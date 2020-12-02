@@ -11,7 +11,7 @@ include "../src/funcions.php";
 
 include "../src/model/citamodel.php";
 
-
+include "../src/controlador/afegirfestiu.php";
 include "../src/controlador/pendents.php";
 include "../src/controlador/registrarse.php";
 include "../src/controlador/validar-cita.php";
@@ -20,7 +20,12 @@ include "../src/controlador/login.php";
 include "../src/controlador/cita.php";
 include "../src/middleware/auth.php";
 include "../src/controlador/error.php";
-
+/*include "../src/controladors/llistatUsuaris.php";
+include "../src/controladors/esborrarUsuari.php";
+include "../src/controladors/editarUsuari.php";
+include "../src/controladors/actualitzarUsuari.php";
+include "../src/middleware/auth.php";
+include "../src/middleware/authAdmin.php";*/
 $r = $_REQUEST["r"];
 
 $resposta = new Emeset\HTTP\Resposta();
@@ -29,7 +34,9 @@ $ruter = new Emeset\Ruters\RuterParam($config);
 
 
 $ruter->ruta("cita", "ctrlCita");
+$ruter->ruta("citahora", "ctrlCitaHora");
 $ruter->ruta("pendents", "ctrlPendets");
+$ruter->ruta("festiu", "ctrlFestius");
 $ruter->ruta("validar-cita", "ctrlvalidarcita");
 $ruter->ruta("registrarse", "ctrlRegistrar");
 $ruter->ruta("login", "ctrlogin");
@@ -38,5 +45,9 @@ $ruter->ruta("privat", "ctrlPrivat", "auth");
 $ruter->ruta("tancar-sessio", "ctrlTancarSessio", "auth");
 $ruter->ruta(RUTA_PER_DEFECTE, "ctrlError");
 
+/*$ruter->ruta("usuaris", "ctrlLlistatUsuaris", "authAdmin");
+$ruter->ruta("esborrar_usuari", "ctrlEsborrarUsuari", "authAdmin");
+$ruter->ruta("editar_usuari", "ctrlEditarUsuari", "authAdmin");
+$ruter->ruta("actualitzar_usuari", "ctrlActualitzarUsuari", "authAdmin");*/
 $resposta = $ruter->executa($peticio, $resposta);
 $resposta->resposta();

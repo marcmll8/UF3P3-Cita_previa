@@ -9,7 +9,7 @@ $config["db"]["user"] = 'citaprevia';
 $config["db"]["pass"] = '1234';
 $config["db"]["dbname"] = 'cita_previa';
 $config["db"]["host"] = 'localhost';
-
+$config["hash"] = ["cost" => 12];
 
 /* Nom de la cookie */
 $config["cookie"]["name"] = 'tasques';

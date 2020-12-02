@@ -46,7 +46,16 @@ class usuariomodel
         $tasques=$query->fetch(\PDO::FETCH_ASSOC);
         return $tasques;
     }
-
+    public function actualitzarClau($id, $clau)
+    {
+        $query = $this->sql->prepare('update usuari set contrasenya = :clau  where nom = :nom;');
+        $result = $query->execute([':nom' => $id, ":clau" => $clau]);
+        if ($query->errorCode() !== '00000') {
+            $err = $query->errorInfo();
+            $code = $query->errorCode();
+            die("Error.   {$err[0]} - {$err[1]}\n{$err[2]} ");
+        }
+    }
     //
     public function existeix($usuario)
     {
