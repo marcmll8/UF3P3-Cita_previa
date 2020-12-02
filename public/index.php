@@ -18,6 +18,7 @@ include "../src/controlador/validar-cita.php";
 include "../src/controlador/validar-login.php";
 include "../src/controlador/login.php";
 include "../src/controlador/cita.php";
+include "../src/controlador/citahora.php";
 include "../src/middleware/auth.php";
 include "../src/controlador/error.php";
 /*include "../src/controladors/llistatUsuaris.php";
