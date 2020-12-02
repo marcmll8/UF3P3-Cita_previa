@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1ff9a71...  primer commit vista cita
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,6 +14,13 @@
     <body class="bodyInici">
         <div class="contene">
              <div class="titulito"><h1>Cita Previa</h1></div>
+<<<<<<< HEAD
+=======
+             <div class="calendariro">
+            <?php echo($calendari); ?>
+
+</div>
+>>>>>>> 1ff9a71...  primer commit vista cita
                 
                     <?php echo($calendari);?>
                     

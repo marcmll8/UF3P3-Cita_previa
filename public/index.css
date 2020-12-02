@@ -37,3 +37,13 @@ border-collapse: collapse;
 .calendari tr{
     border:1px solid black; 
 }
+
+td{
+    width: 13%;
+    background-color: white;
+}
+td:hover{
+    width: 13%;
+    background-color:greenyellow;
+}
+
