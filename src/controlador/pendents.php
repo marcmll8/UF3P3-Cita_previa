@@ -3,7 +3,7 @@ function ctrlPendets($peticio, $resposta, $config)
 { 
     $usuario=$peticio->get("SESSION", "usuari");
     $festius=new festiusmodel($config["db"]);
-    print_r($festius->mostrartots());
+
 
     $usuaris=new usuariomodel($config["db"]);
     $info_user=$usuaris->consultar($usuario);
