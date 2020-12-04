@@ -16,6 +16,7 @@ function ctrlCita($peticio, $resposta, $config)
     $resposta->set("error", $error);
     $resposta->setSession("error", "");
     $resposta->set("calendari", $calendarito);
+   
 
     $resposta->SetTemplate("cita.php");
 

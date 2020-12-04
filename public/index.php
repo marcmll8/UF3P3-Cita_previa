@@ -9,7 +9,7 @@ include "../src/config.php";
 
 include "../src/funcions.php";
 
-include "../src/model/citamodel.php";
+
 
 include "../src/controlador/afegirfestiu.php";
 include "../src/controlador/pendents.php";
@@ -38,7 +38,7 @@ $ruter->ruta("cita", "ctrlCita");
 $ruter->ruta("citahora", "ctrlCitaHora");
 $ruter->ruta("pendents", "ctrlPendets");
 $ruter->ruta("festiu", "ctrlFestius");
-$ruter->ruta("validar-cita", "ctrlvalidarcita");
+$ruter->ruta("validar-cita", "ctrlvalidarcita", "auth");
 $ruter->ruta("registrarse", "ctrlRegistrar");
 $ruter->ruta("login", "ctrlogin");
 $ruter->ruta("validar-login", "ctrlvalidarlogin");
