@@ -49,8 +49,8 @@ $ruter->ruta("tancar-sessio", "ctrlTancarSessio", "auth");
 $ruter->ruta(RUTA_PER_DEFECTE, "ctrlError");
 
 $ruter->ruta("usuaris", "ctrlLlistatUsuaris", "authAdmin");
-$ruter->ruta("esborrar_usuari", "ctrlEsborrarUsuaris", "authAdmin");
-$ruter->ruta("editar_usuari", "ctrlEditarUsuaris", "authAdmin");
-$ruter->ruta("actualitzar_usuari", "ctrlActualitzarUsuaris", "authAdmin");
+$ruter->ruta("esborrarUsuari", "ctrlEsborrarUsuaris", "authAdmin");
+$ruter->ruta("editarUsuaris", "ctrleditarUsuaris", "authAdmin");
+$ruter->ruta("actualitzarUsuari", "ctrlActualitzarUsuaris", "authAdmin");
 $resposta = $ruter->executa($peticio, $resposta);
 $resposta->resposta();

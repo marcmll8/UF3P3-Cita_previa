@@ -77,10 +77,10 @@ class usuariomodel
         }
         return $tasques;
     }
-    public function actualitzar($id, $correu, $rol)
+    public function actualitzar($id, $correu, $telefon,$rol)
     {
-        $query = $this->sql->prepare('update usuari set correu = :correu, rol = :rol  where id = :id;');
-        $result = $query->execute([':id' => $id, ":correu" => $correu, ":rol" => $rol]);
+        $query = $this->sql->prepare('update usuari set correu = :correu,telefon = :telefon, rol = :rol  where id = :id;');
+        $result = $query->execute([':id' => $id, ":correu" => $correu,":telefon" => $telefon, ":rol" => $rol]);
         if ($query->errorCode() !== '00000') {
             $err = $query->errorInfo();
             $code = $query->errorCode();

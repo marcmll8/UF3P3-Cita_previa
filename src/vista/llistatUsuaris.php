@@ -31,7 +31,7 @@
             <?php foreach ($llistat as $actual) { ?>
               <tr>
                 <td><?=$actual["id"];?></td>
-                <td><a href="index.php?r=editarUsuaris&id=<?=$actual["id"];?>"><?=$actual["usuari"];?></a></td>
+                <td><a href="index.php?r=editarUsuaris&id=<?=$actual["id"];?>"><?=$actual["nom"];?></a></td>
                 <td><?=$actual["correu"];?></td>
                 <td><?=$actual["rol"];?></td>
                 <td><a href="index.php?r=esborrarUsuaris&delete=<?=$actual["id"];?>">Esborrar</a></td>

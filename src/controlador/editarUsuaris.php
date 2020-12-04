@@ -4,11 +4,10 @@ function ctrleditarUsuaris($peticio, $resposta,$config){
 
     $id = $peticio->get(INPUT_POST, "id");
     $usuario = $peticio->get("SESSION", "usuari");
-    $usuario = $usuaris->get($id);
+    $usuario = $usuaris->consultar($usuario);
 
     $resposta->set("usuari", $usuario);
     $resposta->SetTemplate("editarUsuaris.php");
-
     return $resposta;
 
 }
