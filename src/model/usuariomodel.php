@@ -29,10 +29,10 @@ class usuariomodel
     }
 
     
-    public function esborrar($usuario)
+    public function esborrar($id)
     {
-        $query = $this->sql->prepare('update usuario set borrat=1 where nom=:nom;');
-        $result = $query->execute([":nom" => $usuario]);
+        $query = $this->sql->prepare('delete from usuari where id=:id;');
+        $result = $query->execute([":id" => $id]);
     }
 
 

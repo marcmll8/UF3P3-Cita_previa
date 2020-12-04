@@ -30,7 +30,7 @@ class citamodel
         echo($dia);
     }
     public function mostrarcita($idusuari){
-        $stm2 = $this->sql->prepare('select data,comentari,estat from cita where idusuari = :idusuari;');
+        $stm2 = $this->sql->prepare('select id,data,comentari,estat from cita where idusuari = :idusuari;');
         $result2 = $stm2->execute([':idusuari' => $idusuari]);
         $dies = array();
         while($dia = $stm2->fetch(\PDO::FETCH_ASSOC)){

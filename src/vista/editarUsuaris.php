@@ -12,7 +12,6 @@
     <title>Todo APP</title>
   </head>
   <body>
-
     <?php include "navegacio.php" ?>
     <div class="container">
       <div class="row justify-content-center mt-4">

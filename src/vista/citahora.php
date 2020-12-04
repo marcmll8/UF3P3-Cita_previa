@@ -18,7 +18,7 @@
                     <option value="<?php echo($dia." ".$final[$i]) ?>"><?php echo($final[$i]) ?></option>
                     <?php } ?>
                     </select>
-                    <textarea name="comentari" id="" placeholder="comentari"></textarea>
+                    <textarea name="comentari" id="" placeholder="comentari" required></textarea>
                     <button type="submit">Enviar</button>
                 </form>
                 </div>

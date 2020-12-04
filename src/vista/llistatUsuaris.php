@@ -23,6 +23,7 @@
                 <th scope="col">Codi</th>
                 <th scope="col">Usuari</th>
                 <th scope="col">Email</th>
+                <th scope="col">Telefon</th>
                 <th scope="col">Rol</th>
                 <th scope="col">Esborrar</th>
               </tr>
@@ -31,8 +32,9 @@
             <?php foreach ($llistat as $actual) { ?>
               <tr>
                 <td><?=$actual["id"];?></td>
-                <td><a href="index.php?r=editarUsuaris&id=<?=$actual["id"];?>"><?=$actual["nom"];?></a></td>
+                <td><a href="index.php?r=editarUsuaris&id=<?=$actual["nom"];?>"><?=$actual["nom"];?></a></td>
                 <td><?=$actual["correu"];?></td>
+                <td><?=$actual["telefon"];?></td>
                 <td><?=$actual["rol"];?></td>
                 <td><a href="index.php?r=esborrarUsuaris&delete=<?=$actual["id"];?>">Esborrar</a></td>
               </tr>
