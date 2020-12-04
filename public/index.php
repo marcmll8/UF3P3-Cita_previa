@@ -5,29 +5,29 @@
  */
 session_start();
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
-include "../src/config.php";
+require_once "../src/config.php";
 
-include "../src/funcions.php";
+require_once "../src/funcions.php";
 
 
 
-include "../src/controlador/afegirfestiu.php";
-include "../src/controlador/pendents.php";
-include "../src/controlador/registrarse.php";
-include "../src/controlador/validar-cita.php";
-include "../src/controlador/eliminarcita.php";
-include "../src/controlador/validar-login.php";
-include "../src/controlador/login.php";
-include "../src/controlador/cita.php";
-include "../src/controlador/citahora.php";
-include "../src/middleware/auth.php";
-include "../src/controlador/error.php";
-/*include "../src/controladors/llistatUsuaris.php";
-include "../src/controladors/esborrarUsuari.php";
-include "../src/controladors/editarUsuari.php";
-include "../src/controladors/actualitzarUsuari.php";
-include "../src/middleware/auth.php";
-include "../src/middleware/authAdmin.php";*/
+require_once "../src/controlador/afegirfestiu.php";
+require_once "../src/controlador/pendents.php";
+require_once "../src/controlador/registrarse.php";
+require_once "../src/controlador/validar-cita.php";
+require_once "../src/controlador/eliminarcita.php";
+require_once "../src/controlador/validar-login.php";
+require_once "../src/controlador/login.php";
+require_once "../src/controlador/cita.php";
+require_once "../src/controlador/citahora.php";
+require_once "../src/middleware/auth.php";
+require_once "../src/controlador/error.php";
+require_once "../src/controlador/llistatUsuaris.php";
+require_once "../src/controlador/esborrarUsuaris.php";
+require_once "../src/controlador/editarUsuaris.php";
+require_once "../src/controlador/actualitzarUsuaris.php";
+require_once "../src/middleware/auth.php";
+require_once "../src/middleware/authAdmin.php";
 $r = $_REQUEST["r"];
 
 $resposta = new Emeset\HTTP\Resposta();
@@ -48,9 +48,9 @@ $ruter->ruta("privat", "ctrlPrivat", "auth");
 $ruter->ruta("tancar-sessio", "ctrlTancarSessio", "auth");
 $ruter->ruta(RUTA_PER_DEFECTE, "ctrlError");
 
-/*$ruter->ruta("usuaris", "ctrlLlistatUsuaris", "authAdmin");
-$ruter->ruta("esborrar_usuari", "ctrlEsborrarUsuari", "authAdmin");
-$ruter->ruta("editar_usuari", "ctrlEditarUsuari", "authAdmin");
-$ruter->ruta("actualitzar_usuari", "ctrlActualitzarUsuari", "authAdmin");*/
+$ruter->ruta("usuaris", "ctrlLlistatUsuaris", "authAdmin");
+$ruter->ruta("esborrar_usuari", "ctrlEsborrarUsuaris", "authAdmin");
+$ruter->ruta("editar_usuari", "ctrlEditarUsuaris", "authAdmin");
+$ruter->ruta("actualitzar_usuari", "ctrlActualitzarUsuaris", "authAdmin");
 $resposta = $ruter->executa($peticio, $resposta);
 $resposta->resposta();

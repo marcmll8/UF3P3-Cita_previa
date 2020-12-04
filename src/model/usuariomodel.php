@@ -71,11 +71,20 @@ class usuariomodel
     public function llistatUsuarios()
     {
         $tasques = array();
-        $query = "select id,nom from usuari;";
-        foreach ($this->sql->query($query, \PDO::FETCH_ASSOC) as $tasques) {
-            $tasques[]=$usuario["nom"];
+        $query = "select * from usuari;";
+        foreach ($this->sql->query($query, \PDO::FETCH_ASSOC) as $usuari) {
+            $tasques[]=$usuari;
         }
-        $result=$query->fetch();
         return $tasques;
+    }
+    public function actualitzar($id, $correu, $rol)
+    {
+        $query = $this->sql->prepare('update usuari set correu = :correu, rol = :rol  where id = :id;');
+        $result = $query->execute([':id' => $id, ":correu" => $correu, ":rol" => $rol]);
+        if ($query->errorCode() !== '00000') {
+            $err = $query->errorInfo();
+            $code = $query->errorCode();
+            die("Error.   {$err[0]} - {$err[1]}\n{$err[2]} ");
+        }
     }
 }

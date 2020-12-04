@@ -31,6 +31,8 @@
                             <input type="date" name="data">
                             <button type="submit">Afegir Festiu</button>
                             </form>
+                            
+                            <a href="index.php?r=usuaris">Modificar usuaris</a><br>
                         <?php
                     }
                 ?>
