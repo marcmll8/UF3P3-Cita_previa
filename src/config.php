@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-<!--Moral-->
-=======
 <?php
+define("RUTA_PER_DEFECTE", 0);
 
 $config = array();
 
@@ -16,7 +14,9 @@ $config["db"]["host"] = 'localhost';
 /* Nom de la cookie */
 $config["cookie"]["name"] = 'tasques';
 
-require_once "../src/models/cita-model.php";
-require_once "../src/models/festius-model.php";
-require_once "../src/models/usuario-model.php";
->>>>>>> b5a72020ab0272f67ec858698c33ea9dbc5e9b30
+require_once "../src/model/citamodel.php";
+require_once "../src/model/festiusmodel.php";
+require_once "../src/model/usuariomodel.php";
+require_once "../src/emeset/http/peticio.php";
+require_once "../src/emeset/http/resposta.php";
+require_once "../src/emeset/ruter/ruter.php";

@@ -3,17 +3,18 @@
 function ctrlRegistrar($peticio, $resposta, $config)
 {
     $usuaris=new usuariomodel($config["db"]);
-
-    $usuario = $peticio->get(INPUT_POST, "nom");
+    
+    $usuario = $peticio->get(INPUT_POST, "usuari");
     $contrasenya = $peticio->get(INPUT_POST, "contrasenya");
+    $telefon = $peticio->get(INPUT_POST, "telefon");
     $correu = $peticio->get(INPUT_POST, "correu");
 
     if (!$usuaris->existeix($usuario)) {
         $hash = password_hash($contrasenya, PASSWORD_DEFAULT, ["cost" => 12]);
-        $usuaris->afegir($usuario, $correu, $hash);
+        $usuaris->afegir($usuario, $correu,$hash,$telefon);
         $resposta->setSession("nom", $usuario);
         $resposta->setSession("logat", true);
-        $resposta->redirect("location: index.php");
+        $resposta->redirect("location: index.php?r=cita");
     } else {
         $resposta->setSession("logat", false);
         $resposta->redirect("location: index.php?r=login");

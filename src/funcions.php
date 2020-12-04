@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 include "config.php";
 /**
@@ -26,7 +24,7 @@ function creaCalendari($mes,$any ,$festius = array()){
           <th>Dive</th>
           <th>Disa</th>
           <th>Dium</th>
-          </tr>';        
+          </tr>';
           $dia=1;
           $i=0; 
           $calendari=$calendari ."<tr>";
@@ -53,19 +51,6 @@ function creaCalendari($mes,$any ,$festius = array()){
       if($dia<=$diaf){  $calendari=$calendari.$dia; $dia++;} 
       if(!in_array($dia,$festius)){$calendari=$calendari."</button>";}
         $calendari=$calendari.'</td>';
-<<<<<<< HEAD
-           
-            
-          if($i%7==0){
-            $calendari=$calendari.'</tr>';
-          }
-            
-          $i++;}
-          $calendari=$calendari.'</table>';
-          return $calendari;
-}
->>>>>>> 5ef306e63e358869b706cfc966166a661288abe8
-=======
           
         if($i%7==0){
           $calendari=$calendari.'</tr>';
@@ -74,5 +59,4 @@ function creaCalendari($mes,$any ,$festius = array()){
         $i++;}
         $calendari=$calendari.'</table>';
         return $calendari;
-}
->>>>>>> b5a72020ab0272f67ec858698c33ea9dbc5e9b30
+      }

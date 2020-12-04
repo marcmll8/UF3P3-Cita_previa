@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<!--peralta-->
-=======
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,6 +6,7 @@
     <title>Cita Previa</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="../../public/index.css">
+    
     <body class="bodyInici">
         <div class="contene">
              <div class="titulito"><h1>Cita Previa</h1></div>
@@ -20,4 +18,3 @@
 </body>
 </html>
 
->>>>>>> b5a72020ab0272f67ec858698c33ea9dbc5e9b30

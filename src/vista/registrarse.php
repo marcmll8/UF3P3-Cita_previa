@@ -19,35 +19,29 @@
           </div>
             <?php }?>
 
-    <div class="row justify-content-md-center">
+            <div class="row justify-content-md-center">
         <div class="col-4  p-3">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">REGISTRARSE</h5>
               <p class="card-text">
-                <form action="index.php?r=validar-login" method="post">
-
-                  <div class="form-group">
-                    <label for="inputUsuari">Usuari</label>
-                    <input name="usuari" type="text" class="form-control" id="inputUsuari" value="<?=$usuariRegistre;?>" placeholder="nombre de usuario">
-                  </div>
-                  
+                <form action="index.php?r=registrarse" method="post">
+          
                   <div class="form-group">
                     <label for="inputuUsuari">Usuari</label>
-                    <input name="usuari" type="text" class="form-control" id="inputUsuario" value="<?=$usuario;?>" placeholder="nombre de usuario">
+                    <input name="usuari" type="text" class="form-control" id="inputUsuario" value="" placeholder="nombre de usuario">
                   </div>
-
                   <div class="form-group">
                     <label for="inputCorreu">Correu</label>
-                    <input name="correu" type="text" class="form-control" id="inputCorreu" value="<?=$correuRegistre;?>" placeholder="nombre de usuario">
+                    <input name="correu" type="text" class="form-control" id="inputCorreu" value="" placeholder="correu electronic">
                   </div>
                   <div class="form-group">
-                    <label for="inputContrasenya">Contrasenya</label>
-                    <input name="contrasenya" type="password" class="form-control" id="inputContrasenya" placeholder="contrase">
+                    <label for="inputContraseña">Contrasenya</label>
+                    <input name="contrasenya" type="password" class="form-control" id="inputContraseña" value="" placeholder="contrasenya">
                   </div>
+                  <button type="submit" class="btn-2 btn-primary">Registrarse</button>
 
-                  <button type="submit" class="btn btn-primary">Registrar</button>
-                
+
                   </form>
               </p>
             </div>
