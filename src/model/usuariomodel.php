@@ -44,6 +44,7 @@ class usuariomodel
         $query =$this->sql->prepare("select * from usuari where nom = :nom;");
         $result= $query->execute([":nom"=> $usuario]);
         $tasques=$query->fetch(\PDO::FETCH_ASSOC);
+        //print_r($tasques);
         return $tasques;
     }
     public function actualitzarClau($id, $clau)

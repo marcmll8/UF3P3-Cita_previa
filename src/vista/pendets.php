@@ -14,7 +14,7 @@
                     for($i=0;$i<count($llistapendents);$i++){
                         ?>
                         <tr>
-                            <td><?php echo($llistapendents[$i]["data"]) ?></td><td><?php echo($llistapendents[$i]["comentari"]) ?></td><td><?php echo($llistapendents[$i]["estat"]) ?></td>
+                            <td><?php echo($llistapendents[$i]["data"]) ?></td><td><?php echo($llistapendents[$i]["comentari"]) ?></td><td><?php echo($llistapendents[$i]["estat"]) ?></td><?php if($info_user["nom"]=="admin"){ ?><td><?php echo($llistapendents[$i]["idusuari"]); ?></td> <?php } ?>
                         </tr>
                     <?php 
                     }

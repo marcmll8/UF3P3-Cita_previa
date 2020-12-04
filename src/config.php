@@ -5,7 +5,7 @@ define("RUTA_PER_DEFECTE", 0);
 
 /* configuració de connexió a la base dades */
 $config["db"] = array();
-$config["db"]["user"] = 'citaprevia';
+$config["db"]["user"] = 'cita_previa';
 $config["db"]["pass"] = '1234';
 $config["db"]["dbname"] = 'cita_previa';
 $config["db"]["host"] = 'localhost';
