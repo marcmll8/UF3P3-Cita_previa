@@ -15,6 +15,10 @@
                         ?>
                         <tr>
                             <td><?php echo($llistapendents[$i]["data"]) ?></td><td><?php echo($llistapendents[$i]["comentari"]) ?></td><td><?php echo($llistapendents[$i]["estat"]) ?></td><?php if($info_user["nom"]=="admin"){ ?><td><?php echo($llistapendents[$i]["idusuari"]); ?></td> <?php } ?>
+                            <td><form action="../public/index.php?r=eliminarcita" method="post">
+                                <input type="hidden" name="id" value="<?php echo $llistapendents[$i]["id"]?>">
+                                <button type="submit" class="btn btn-primary" name="desconecta">Eliminar</button>
+                                </form></td>
                         </tr>
                     <?php 
                     }
@@ -30,11 +34,15 @@
                         <?php
                     }
                 ?>
+                <a href="index.php?r=cita">Solicitar cita</a>
+                <br>
+                <br>
+
                      <form action="../public/index.php?r=login" method="post">
                 <button type="submit" class="btn btn-primary" name="desconecta">Desconectar</button>
                 </form>
 
-                <a href="index.php?r=cita">Continuar</a>
+                
                 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

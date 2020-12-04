@@ -14,7 +14,7 @@ function ctrlRegistrar($peticio, $resposta, $config)
         $usuaris->afegir($usuario, $correu,$hash,$telefon);
         $resposta->setSession("nom", $usuario);
         $resposta->setSession("logat", true);
-        $resposta->redirect("location: index.php?r=cita");
+        $resposta->redirect("location: index.php?r=pendents");
     } else {
         $resposta->setSession("logat", false);
         $resposta->redirect("location: index.php?r=login");

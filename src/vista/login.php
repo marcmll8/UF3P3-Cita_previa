@@ -39,10 +39,14 @@
                     <input name="contrasenya" type="password" class="form-control" id="inputContraseña" value="<?=$contraseña;?>" placeholder="contraseña">
                   </div>
                   <button type="submit" class="btn-2 btn-primary">Acceder</button>
-                  <button type="submit" class="btn-2 btn-primary">Registrarse</button>
+
 
                 </form>
-                 
+                </div>
+                </div>
+                </div>
+                <div class="row justify-content-md-center">
+                <div class="col-12  p-3">
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title">REGISTRARSE</h5>

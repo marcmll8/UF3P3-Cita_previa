@@ -70,7 +70,7 @@ class citamodel
         return $hores;
     }
     public function esborrarcita($idcita){
-        $query =$this->sql->prepare("delete table cita where id = :idcita;");
+        $query =$this->sql->prepare("delete from cita where id = :idcita;");
         $result2 = $query->execute([':idcita' => $idcita]);
       
     }
