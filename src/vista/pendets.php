@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../public/index.css">
     <body class="bodyInici">
         <div class="contene">
-             <div class="titulito"><h1>Pendets</h1></div>
-                <table>
+             <div class="titulito"><h1>Cites Pendets</h1></div>
+                <table class="pendiento">
                     <?php 
                     for($i=0;$i<count($llistapendents);$i++){
                         ?>
@@ -17,7 +17,7 @@
                             <td><?php echo($llistapendents[$i]["data"]) ?></td><td><?php echo($llistapendents[$i]["comentari"]) ?></td><td><?php echo($llistapendents[$i]["estat"]) ?></td><?php if($info_user["nom"]=="admin"){ ?><td><?php echo($llistapendents[$i]["idusuari"]); ?></td> <?php } ?>
                             <td><form action="../public/index.php?r=eliminarcita" method="post">
                                 <input type="hidden" name="id" value="<?php echo $llistapendents[$i]["id"]?>">
-                                <button type="submit" class="btn btn-primary" name="desconecta">Cancel·lar</button>
+                                <button type="submit" class="btn btn-primary butonsito" name="desconecta">Cancel·lar</button>
                                 </form></td>
                         </tr>
                     <?php 
@@ -28,20 +28,20 @@
                     if($info_user["rol"]!="client"){
                         ?>
                             <form action="index.php?r=festiu" method="post">
-                            <input type="date" name="data">
-                            <button type="submit">Afegir Festiu</button>
+                            <input type="date" name="data" class="datasita">
+                            <button type="submit" class="btn btn-primary butonsito">Afegir Festiu</button>
                             </form>
                             
-                            <a href="index.php?r=usuaris">Modificar usuaris</a><br>
+                            <a href="index.php?r=usuaris" class="btn btn-primary butonsito2">Modificar usuaris</a><br>
                         <?php
                     }
                 ?>
-                <a href="index.php?r=cita">Solicitar cita</a>
+                <a href="index.php?r=cita" class="btn btn-primary butonsito">Solicitar cita</a>
                 <br>
                 <br>
 
                      <form action="../public/index.php?r=login" method="post">
-                <button type="submit" class="btn btn-primary" name="desconecta">Desconectar</button>
+                <button type="submit" class="btn btn-primary butonsito" name="desconecta">Desconectar</button>
                 </form>
 
                 

@@ -34,6 +34,7 @@ function ctrlCitaHora($peticio,$resposta,$config){
             array_push($final,$hores[$i]);
         }
     }
+    $resposta->set("mostrarDia",$dataF);
     $resposta->set("final",$final);
     $resposta->set("dia",$dataM);
     return $resposta;
