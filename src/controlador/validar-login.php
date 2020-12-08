@@ -1,6 +1,6 @@
 <?php
 function ctrlvalidarlogin($peticio, $resposta,$config)
-{   //KRISTHEL
+{   
     
     $usuaris=new usuariomodel($config["db"]);
    

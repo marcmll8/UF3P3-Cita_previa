@@ -1,20 +1,12 @@
 <?php
 
-/**
-    * Exemple de MVC per a M07 Desenvolupament d'aplicacions web en entorn de servidor.
-    * Ruter a partir d'un parametre d'entrada.
-    * @author: Dani Prados dprados@cendrassos.net
-    *
-    * Ruter que escull quin controlador s'ha d'executar
-    *
-**/
+
 
 namespace Emeset\Ruters;
 
 
 /**
     * Ruter: objecte que enruta a la petició al controlador adequat.
-    * @author: Dani Prados dprados@cendrassos.net
     *
     * Permet definir les rutes dels controladors
     *

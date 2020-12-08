@@ -1,19 +1,11 @@
 <?php
 
-/**
-    * Exemple de MVC per a M07 Desenvolupament d'aplicacions web en entorn de servidor.
-    * Encapsula tota la resposta HTTP del framework emeset.
-    * @author: Dani Prados dprados@cendrassos.net
-    *
-    * Objecte que encapsula la resposta.
-    *
-**/
+
 
 namespace Emeset\HTTP;
 
 /**
     * Resposta: Objecte que encapsula la resposta.
-    * @author: Dani Prados dprados@cendrassos.net
     *
     * Per guarda tota la informació de la resposta.
     *

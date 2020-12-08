@@ -1,19 +1,12 @@
 <?php
 
-/**
-    * Exemple de MVC per a M07 Desenvolupament d'aplicacions web en entorn de servidor.
-    * Encapsula tota la petició HTTP del framework emeset.
-    * @author: Dani Prados dprados@cendrassos.net
-    *
-    * Model que gestiona la petició d'una aplicació HTTP
-    *
-**/
+
 
 namespace Emeset\HTTP;
 
 /**
     * Petició: objecte que gestiona la petició HTTP.
-    * @author: Dani Prados dprados@cendrassos.net
+
     *
     * Encapsula la petició HTTP per permetre llegir-la com una entrada.
     *
