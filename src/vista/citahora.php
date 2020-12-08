@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cita Previa</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../public/index.css">
+    <link rel="stylesheet" href="../public/index.css">
     <body class="bodyInici">
         <div class="contene">
-             <div class="titulito"><h1>Cita Previa per el dia <?php echo($dia); ?></h1></div>
+             <div class="titulito"><h1>Cita Previa per el dia <?php echo($mostrarDia); ?></h1></div>
                 <div class="horari">
-                <form action ="../public/index.php?r=validar-cita" method="post">
-                    <select name="hora" id="">
+                <form action ="../public/index.php?r=validar-cita" method="post" class="formulario">
+                <img src="../src/img/barberia3.png" class="barberito">
+                    <select name="hora" id="" class="selecto">
                     <?php
                         for($i=0;$i<count($final);$i++){
                     ?>
                     <option value="<?php echo($dia." ".$final[$i]) ?>"><?php echo($final[$i]) ?></option>
                     <?php } ?>
                     </select>
-                    <textarea name="comentari" id="" placeholder="comentari" required></textarea>
-                    <button type="submit">Enviar</button>
+                    <textarea class="area" name="comentari" id="" placeholder="comentari" required></textarea>
+                    <button type="submit" class="btn btn-primary butonsito3">Enviar</button>
                 </form>
                 </div>
                 </div>
