@@ -17,7 +17,12 @@
    padding-top:20px;
    color:#D40005;
 }
-
+.titulito2{
+    text-align: center;
+    margin-left: 20px;
+   padding-top:20px;
+   color:#D40005;
+}
 .calendariro{
     margin-top:100px;
    margin-left: 5%;
@@ -67,7 +72,20 @@ td{
     display: table;
     width: 100%;
 }
-
+ .pendiento2{
+        margin-top: 60px;
+        margin-bottom: 40px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        z-index: 1000;
+        text-align: center;
+       
+       background-color: #D1C7C9;
+        color: #D40005;
+        border-radius: 20px;
+       
+    }
 .centered {
     position: relative;
     width: 100%;
@@ -91,6 +109,7 @@ td{
         border-radius: 20px;
        
     }
+   
  
    
 .bodyInici{
