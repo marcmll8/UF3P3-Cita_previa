@@ -22,7 +22,9 @@ function ctrlCitaHora($peticio,$resposta,$config){
     $resposta->set("error", $error);
     $resposta ->SetTemplate("citahora.php");
     $resposta->set("dia",$dataF);
-    $horesagafades=$cita->mostrartotes($dataM);
+    $horesagafades=$cita->mostrartotes($dataM);        
+    $disponible=true;
+
     if($horesagafades==0){
         $horesagafades=array("");
     }
@@ -41,6 +43,11 @@ function ctrlCitaHora($peticio,$resposta,$config){
             array_push($final,$hores[$i]);
         }
     }
+    if(count($horesagafades)==12){
+        $final=["no hi ha hores disponibles"];
+        $disponible=false;
+    }
+    $resposta->set("disponible",$disponible);
     $resposta->set("mostrarDia",$dataF);
     $resposta->set("final",$final);
     $resposta->set("dia",$dataM);

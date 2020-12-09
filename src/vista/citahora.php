@@ -10,7 +10,13 @@
         <div class="contene">
              <div class="titulito"><h1>Cita Previa per el dia <?php echo($mostrarDia); ?></h1></div>
                 <div class="horari">
+                <?php if($disponible==true){ ?>
                 <form action ="../public/index.php?r=validar-cita" method="post" class="formulario">
+                <?php }
+                else{?>
+                <form action ="../public/index.php?r=cita" method="post" class="formulario">
+                <?php } ?>
+                
                 <img src="../src/img/barberia3.png" class="barberito">
                     <select name="hora" id="" class="selecto">
                     <?php
@@ -19,8 +25,15 @@
                     <option value="<?php echo($dia." ".$final[$i]) ?>"><?php echo($final[$i]) ?></option>
                     <?php } ?>
                     </select>
+                      <?php 
+                    if($disponible==true){ ?>
                     <textarea class="area" name="comentari" id="" placeholder="comentari" required></textarea>
+                  
                     <button type="submit" class="btn btn-primary butonsito3">Enviar</button>
+                    <?php }
+                    else{?>
+                        <button type="submit" class="btn btn-primary butonsito3">Tornar al calendari</button>
+                     <?php } ?>
                 </form>
                 </div>
                 </div>
