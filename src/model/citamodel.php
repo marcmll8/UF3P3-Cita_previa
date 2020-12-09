@@ -49,7 +49,7 @@ class citamodel
         $result2 = $stm2->execute([':dia' => $dia]);
         while($hora = $stm2->fetch(\PDO::FETCH_ASSOC)){
             $data=new DateTime($hora["data"]);
-            $temps=$data->format("g:i");
+            $temps=$data->format("G:i");
             
             $hores[] = $temps;
         } 

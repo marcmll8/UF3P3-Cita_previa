@@ -24,7 +24,7 @@ function ctrlCitaHora($peticio,$resposta,$config){
     $resposta->set("dia",$dataF);
     $horesagafades=$cita->mostrartotes($dataM);
     if($horesagafades==0){
-        $horesagafades=array("" );
+        $horesagafades=array("");
     }
     $hores=["8:00","8:30","9:00","9:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00","13:30"];
     $final=array();
