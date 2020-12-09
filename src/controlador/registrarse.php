@@ -22,6 +22,8 @@ function ctrlRegistrar($peticio, $resposta, $config)
         $resposta->setSession("nom", $usuario);
         $resposta->setSession("logat", true);
         $resposta->redirect("location: index.php?r=pendents");
+        $resposta->setSession("usuari",$usuario);
+        $resposta->setSession("logat", true);
     } else {
         $resposta->setSession("error", "Has d'inserir tots els camps per registrarte o l'usuari ja existeix!");
         $resposta->setSession("logat", false);

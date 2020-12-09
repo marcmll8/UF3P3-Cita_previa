@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../public/index.css">
     <body class="bodyInici">
         <div class="contene">
-             <div class="titulito"><h1>Cites Pendets</h1></div>
+             <div class="titulito"><h1>Cites Pendents</h1></div>
                 <table class="pendiento">
                     <?php 
                     for($i=0;$i<count($llistapendents);$i++){
