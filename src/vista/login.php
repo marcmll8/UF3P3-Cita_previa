@@ -19,8 +19,10 @@
                 <?=$error;?>
           </div>
             <?php }?>
+      <div class="pendiento2">
+        <h1 class="titulito2" >PERRUQUERIA MARC'S&KRIS</h1>
+      </div>
 
-      <h1 class="titulito2" >PERRUQUERIA MARC'S&KRIS</h1>
       <div class="row justify-content-md-center">
         <div class="col-4  p-3">
           <div class="card pendiento">
