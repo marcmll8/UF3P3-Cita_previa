@@ -1,13 +1,5 @@
 <?php
 
-/**************************
- *
- * M07 - UF1
- * Professor: Dani Prados
- *
- * Exemple de fitxer init per inicialitzar la base dades des de
- * la línia de comandes.
-***************************/
 
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 

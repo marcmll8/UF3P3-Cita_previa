@@ -34,7 +34,7 @@ $resposta = new Emeset\HTTP\Resposta();
 $peticio = new Emeset\HTTP\Peticio();
 $ruter = new Emeset\Ruters\RuterParam($config);
 
-
+$ruter->ruta("", "ctrlogin");
 $ruter->ruta("cita", "ctrlCita");
 $ruter->ruta("citahora", "ctrlCitaHora");
 $ruter->ruta("pendents", "ctrlPendets");
