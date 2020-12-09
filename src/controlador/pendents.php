@@ -1,4 +1,12 @@
 <?php
+/**
+ * ctrlPendets function
+ * Controlador de pendents
+ * @param [type] $peticio
+ * @param [type] $resposta
+ * @param [type] $config
+ * @return void
+ */
 function ctrlPendets($peticio, $resposta, $config)
 { 
     $usuario=$peticio->get("SESSION", "usuari");

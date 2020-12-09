@@ -1,4 +1,12 @@
 <?php
+/**
+ * ctrlLlistatUsuaris function
+ *  Controlador per llistar els usuaris
+ * @param [type] $peticio
+ * @param [type] $resposta
+ * @param [type] $config
+ * @return void
+ */
 function ctrlLlistatUsuaris($peticio, $resposta,$config){
     $usuaris = new usuariomodel($config["db"]); 
 

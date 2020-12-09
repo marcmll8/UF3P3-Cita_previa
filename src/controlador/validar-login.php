@@ -1,4 +1,12 @@
 <?php
+/**
+ * ctrlvalidarlogin function
+ * Valida el login
+ * @param [type] $peticio
+ * @param [type] $resposta
+ * @param [type] $config
+ * @return void
+ */
 function ctrlvalidarlogin($peticio, $resposta,$config)
 {   
     

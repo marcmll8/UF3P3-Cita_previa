@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * ctrlError function
+ * Controlador del error
+ * @param [type] $peticio
+ * @param [type] $resposta
+ * @param [type] $config
+ * @return void
+ */
 function ctrlError($peticio, $resposta, $config)
 {
 

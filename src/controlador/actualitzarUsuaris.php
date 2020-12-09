@@ -1,4 +1,12 @@
 <?php
+/**
+ * ctrlActualitzarUsuaris function
+ * Actualitza els usuaris
+ * @param [type] $peticio
+ * @param [type] $resposta
+ * @param [type] $config
+ * @return void
+ */
 function ctrlActualitzarUsuaris($peticio, $resposta, $config)
 {
     $id = $peticio->get(INPUT_POST, "id");

@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * ctrlCitaHora function
+ *  Controlador per demanar la hora
+ * @param [type] $peticio
+ * @param [type] $resposta
+ * @param [type] $config
+ * @return void
+ */
 function ctrlCitaHora($peticio,$resposta,$config){
    
     $dia = $peticio ->get(INPUT_GET,"m");

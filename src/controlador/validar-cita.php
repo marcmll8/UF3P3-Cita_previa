@@ -1,4 +1,11 @@
 <?php
+/**
+ * ctrlvalidarcita function
+ * Controlador de validar la cita
+ * @param [type] $peticio
+ * @param [type] $resposta
+ * @return void
+ */
 function ctrlvalidarcita($peticio, $resposta){
     $cita=new citamodel($config["db"]);
     $usuaris=new usuariomodel($config["db"]);

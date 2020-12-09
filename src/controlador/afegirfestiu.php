@@ -1,4 +1,12 @@
 <?php
+/**
+ * ctrlFestius function
+ *  controlador dels festius
+ * @param [type] $peticio
+ * @param [type] $resposta
+ * @param [type] $config
+ * @return void
+ */
 function ctrlFestius($peticio, $resposta,$config)
 {
     $festius=new festiusmodel($config["db"]);

@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * ctrlRegistrar function
+ *  controlador de Registrar
+ * @param [type] $peticio
+ * @param [type] $resposta
+ * @param [type] $config
+ * @return void
+ */
 function ctrlRegistrar($peticio, $resposta, $config)
 {
     $usuaris=new usuariomodel($config["db"]);

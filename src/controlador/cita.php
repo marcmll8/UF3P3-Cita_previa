@@ -1,5 +1,12 @@
 <?php 
-
+/**
+ * ctrlCita function
+ *  Controlador de cita
+ * @param [type] $peticio
+ * @param [type] $resposta
+ * @param [type] $config
+ * @return void
+ */
 function ctrlCita($peticio, $resposta, $config)
 { 
     $festiusito=new festiusmodel($config["db"]);

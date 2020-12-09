@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * ctrlogin function
+ *  controlador de login
+ * @param [type] $peticio
+ * @param [type] $resposta
+ * @param [type] $config
+ * @return void
+ */
 function ctrlogin($peticio, $resposta, $config)
 { 
   
