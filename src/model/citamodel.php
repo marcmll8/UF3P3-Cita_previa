@@ -60,13 +60,14 @@ class citamodel
        
          
     
-        $stm2 = $this->sql->prepare('select * from cita;');
+        $stm2 = $this->sql->prepare('select cita.id,cita.data,cita.comentari,cita.estat,usuari.nom FROM cita JOIN usuari WHERE idusuari=usuari.id');
         $result2 = $stm2->execute();
         while($hora = $stm2->fetch(\PDO::FETCH_ASSOC)){
             $temps=$hora;
             
             $hores[] = $temps;
         } 
+        
         return $hores;
     }
     public function esborrarcita($idcita){

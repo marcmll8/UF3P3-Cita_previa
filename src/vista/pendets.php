@@ -14,7 +14,7 @@
                     for($i=0;$i<count($llistapendents);$i++){
                         ?>
                         <tr>
-                            <td><?php echo($llistapendents[$i]["data"]) ?></td><td><?php echo($llistapendents[$i]["comentari"]) ?></td><td><?php echo($llistapendents[$i]["estat"]) ?></td><?php if($info_user["nom"]=="admin"){ ?><td><?php echo($llistapendents[$i]["idusuari"]); ?></td> <?php } ?>
+                            <td><?php echo($llistapendents[$i]["data"]) ?></td><td><?php echo($llistapendents[$i]["comentari"]) ?></td><td><?php echo($llistapendents[$i]["estat"]) ?></td><?php if($info_user["nom"]=="admin"){ ?><td><?php echo($llistapendents[$i]["nom"]); ?></td> <?php } ?>
                             <td><form action="../public/index.php?r=eliminarcita" method="post">
                                 <input type="hidden" name="id" value="<?php echo $llistapendents[$i]["id"]?>">
                                 <button type="submit" class="btn btn-primary butonsito" name="desconecta">Cancel·lar</button>

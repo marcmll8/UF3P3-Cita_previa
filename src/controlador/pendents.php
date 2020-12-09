@@ -25,6 +25,7 @@ function ctrlPendets($peticio, $resposta, $config)
     }else{
     $llistapendents= $cita->mostrarcita($info_user["id"]);
     }
+    
     $resposta->set("llistapendents", $llistapendents);
     $resposta->set("info_user",$info_user);
     $resposta->set("festius",$festius);
