@@ -10,7 +10,7 @@ $config["db"]["pass"] = '1234';
 $config["db"]["dbname"] = 'cita_previa';
 $config["db"]["host"] = 'localhost';
 $config["hash"] = ["cost" => 12];
-
+$config["hores"]=["8:00","8:30","9:00","9:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00","13:30"];
 /* Nom de la cookie */
 $config["cookie"]["name"] = 'tasques';
  

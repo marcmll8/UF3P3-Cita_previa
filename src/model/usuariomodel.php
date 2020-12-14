@@ -6,9 +6,9 @@ class usuariomodel
 
     public function __construct($config)
     {    
-        $dsn = 'mysql:dbname=cita_previa;host=localhost';
-        $usuario = 'cita_previa';
-        $contrasenya = '1234';
+        $dsn = 'mysql:dbname='.$config["dbname"].';host='.$config["host"];
+        $usuario = $config["user"];
+        $contrasenya = $config["pass"];
         try {
             $this ->sql = new PDO($dsn, $usuario, $contrasenya);
         } catch (PDOException $e) {

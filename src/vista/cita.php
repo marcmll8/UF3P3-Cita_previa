@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../public/index.css">
     <body class="bodyInici">
         <div class="contene">
-             <div class="titulito"><h1>Cita Previa</h1></div>
+             <div class="titulito"><a href="../public/index.php?r=pendents" class="elnaceh1"><h1>Cita Previa</h1></a></div>
              <div class="calendaritro">
             <?php echo($calendari); ?>
 

@@ -8,7 +8,6 @@
  * @return void
  */
 function ctrlCitaHora($peticio,$resposta,$config){
-   
     $dia = $peticio ->get(INPUT_GET,"m");
     $date=new DateTime();
     $dataS = new DateTime($dia);
@@ -28,7 +27,7 @@ function ctrlCitaHora($peticio,$resposta,$config){
     if($horesagafades==0){
         $horesagafades=array("");
     }
-    $hores=["8:00","8:30","9:00","9:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00","13:30"];
+    $hores= $config["hores"];
     $final=array();
     for($i=0;$i<count($hores);$i++){
         $agafat=false;

@@ -18,7 +18,7 @@ function ctrlogin($peticio, $resposta, $config)
     $resposta->setSession("error", "");
 
     $resposta->SetTemplate("login.php");
-    $desc=$_POST["desconecta"];
+    $desc=$peticio->get(INPUT_POST, "desconecta");
 
     if(isset($desc)){
         $resposta->setSession("logat",false);

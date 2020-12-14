@@ -180,3 +180,14 @@ td{
         width: 40%;
         float: right;
     }
+    .elnaceh1{
+        text-decoration: none;
+    }
+    .elnaceh1:hover{
+        text-decoration: none;
+
+    }
+    .elnaceh1:-webkit-any-link {
+        text-decoration: none;
+
+    }

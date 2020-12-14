@@ -14,12 +14,12 @@ class festiusmodel
      *
     **/
     public function __construct($config)
-    {
-        $dsn = 'mysql:dbname=cita_previa;host=localhost';
-        $usuari = 'cita_previa';
-        $clau = '1234';
+    {    
+        $dsn = 'mysql:dbname='.$config["dbname"].';host='.$config["host"];
+        $usuario = $config["user"];
+        $contrasenya = $config["pass"];
         try {
-            $this->sql =new PDO($dsn, $usuari, $clau);
+            $this ->sql = new PDO($dsn, $usuario, $contrasenya);
         } catch (PDOException $e) {
             die('Ha fallat la connexió: ' . $e->getMessage());
         }
