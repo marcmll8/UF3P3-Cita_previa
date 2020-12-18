@@ -7,10 +7,176 @@
 
 .contene{
     width: 100%;
-    background-color: violet;
+    background-color:#D1C7C9;
     height: 100px;
 }
 
+
 .titulito{
+    margin-left: 20px;
    padding-top:20px;
+   color:#D40005;
 }
+.titulito2{
+    text-align: center;
+    margin-left: 20px;
+    padding: 5px;
+   color:#D40005;
+}
+.calendariro{
+    margin-top:100px;
+   margin-left: 5%;
+   margin-right: 5%;
+}
+
+.calendari{
+    height: 500px;
+margin-left: 5%;
+margin-right: 5%;
+margin-top: 80px;
+background-color:#D1C7C9 ;
+text-align: center;
+width: 90%;
+border:1px solid black;
+border-collapse: collapse;
+color: #D40005;
+}
+
+.calendari td{
+    color: gray; 
+    border:1px solid black;
+    transition: 0.8s;
+}
+.calendari a{
+    color: black;
+}
+.calendari td:hover{
+    transition: 0.8s;
+    background-color: #D40005;
+  
+}
+
+
+.calendari tr{
+    
+    border:1px solid black; 
+}
+
+td{
+    width: 13%;
+  
+}
+
+
+.container {
+    display: table;
+    width: 100%;
+}
+ .pendiento2{
+        margin-top: 60px;
+        margin-bottom: 40px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        z-index: 1000;
+        text-align: center;
+       
+       background-color: #D1C7C9;
+        color: #D40005;
+        border-radius: 20px;
+       
+    }
+.centered {
+    position: relative;
+    width: 100%;
+    height: 754px;
+    display: table-cell ;
+    text-align: center ;
+    vertical-align: middle ;
+    }
+
+    .pendiento{
+        margin-top: 60px;
+        margin-bottom: 40px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        z-index: 1000;
+        text-align: center;
+        height: 300px;
+       background-color: #D1C7C9;
+        color: #D40005;
+        border-radius: 20px;
+       
+    }
+   
+ 
+   
+.bodyInici{
+    background-image:url("../src/img/bgbarber.jpg");
+    
+}
+    .pendiento td{
+        border-bottom: 1px solid white;
+    }
+   
+    .butonsito{
+        margin-left: 20px;
+        background-color: #D40005 !important;
+        border: 1px solid #D40005;
+    }
+    .butonsito2{
+        margin-left: 20px;
+        background-color: #D40005 !important;
+        border: 1px solid #D40005;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .datasita{
+        border:1px solid black;
+        margin-left: 20px;
+        margin-top:20px;
+    }
+
+    .formulario{
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+       background-color: #D1C7C9;
+        text-align: center;
+        margin-top:80px;
+        padding-top: 30px;
+        border-radius: 20px;
+        height: 400px;
+    }
+
+    .selecto{
+        padding-left: 5px;
+        margin-bottom: 30px;
+        margin-left: 10%;
+      width: 40%;
+        display: block;
+    }
+
+    .area{
+        padding-top: 5px;
+        padding-left: 5px;
+        resize: none;
+        height: 150px;
+        width: 40%;
+    }
+
+    .butonsito3{
+        margin-left: 20px;
+        background-color: #D40005 !important;
+        border: 1px solid #D40005;
+        display: block;
+        width: 40%;
+        margin-top: 30px;
+        margin-left: 10%;
+    }
+    .barberito{
+        width: 40%;
+        float: right;
+    }

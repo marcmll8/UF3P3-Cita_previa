@@ -12,7 +12,6 @@
     <title>Todo APP</title>
   </head>
   <body>
-
     <?php include "navegacio.php" ?>
     <div class="container">
       <div class="row justify-content-center mt-4">
@@ -21,26 +20,29 @@
             <div class="card-header">Editar: Actualitza les dades de l'usuari</div>
             <div class="card-body">
               <p class="card-text">
-                <form action="index.php" method="post">
+                <form action="index.php?r=actualitzarUsuari" method="post">
                 <input type="hidden" name="r" value="actualitzarUsuari">
-                <input type="hidden" name="id" value="<?=$usuario["id"];?>">
+                <input type="hidden" name="id" value="<?=$usuari["id"];?>">
                   <div class="form-group">
                     <label for="inputUsuari2">Usuari: </label>
-                    <?=$usuario["usuari"];?>
+                    <?=$usuari["nom"];?>
                   </div>
                   <div class="form-group">
                     <label for="inputCorreu">Correu:</label>
-                    <input name="correu" type="text" class="form-control" id="inputCorreu" value="<?=$usuario["correu"];?>">
+                    <input name="correu" type="mail" class="form-control" id="inputCorreu" placeholder="<?=$usuari["correu"];?>" value="<?=$usuari["correu"];?>">
                   </div>
-
+                  <div class="form-group">
+                    <label for="telefon">Telefon:</label>
+                    <input name="telefon" type="text" class="form-control" id="inputCorreu" placeholder="<?=$usuari["telefon"];?>" value="<?=$usuari["telefon"];?>">
+                  </div>
                   <div class="form-group">
                     <label for="inputRol">Rol:</label><br>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="rol" id="rol1" value="admin" <?php if($usuario["rol"]=='admin'){ echo "checked='checked'"; } ?>)>
+                        <input class="form-check-input" type="radio" name="rol" id="rol1" value="admin" <?php if($usuari["rol"]=='admin'){ echo "checked='checked'"; } ?>)>
                         <label class="form-check-label" for="rol1">Admin</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="rol" id="rol2" value="" <?php if($usuario["rol"]!='admin'){ echo "checked='checked' "; } ?>>
+                        <input class="form-check-input" type="radio" name="rol" id="rol2" value="" <?php if($usuari["rol"]!='admin'){ echo "checked='checked' "; } ?>>
                         <label class="form-check-label" for="rol2">Usuari</label>
                     </div>
                   </div>

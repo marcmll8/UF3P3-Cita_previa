@@ -13,7 +13,7 @@ function authAdmin($peticio, $resposta, $config, $next) {
         $logat = false;
     } 
 
-    $usuariActual = $usuaris->getUsuari($usuario);
+    $usuariActual = $usuaris->consultar($usuario);
 
     $resposta->set("usuariLogat", $usuario);
     $resposta->set("logat", $logat);

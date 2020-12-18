@@ -1,37 +1,20 @@
 <?php
 
-/**************************
- *
- * M07 - UF1
- * Professor: Dani Prados
- *
- * Exemple de fitxer init per inicialitzar la base dades des de
- * la línia de comandes.
-***************************/
+
 
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 
-$dsn = 'mysql:dbname=cita_previa;host=localhost';
-$usuari = 'cita_previa';
-$clau = '1234';
-try {
-    $sql = new PDO($dsn, $usuari, $clau);
-} catch (PDOException $e) {
-    die('Ha fallat la connexió: ' . $e->getMessage());
-}
+$usuaris=new usuariomodel($config["db"]);
+
 
 // Buidem la taula
 $usuaris = array();
 echo "Buidant la taula - ";
 
-$query = "delete from usuari where nom=nom;";
-$sql->exec($query);
-
-
+$usuaris->esborrartodos();
 echo "[ok]\n";
 
-// Inserim valors
 
 
 $usuaris = array(
@@ -41,12 +24,10 @@ $usuaris = array(
 );
 
 
-
-
-foreach ($usuaris as $actual) {
+foreach ($usuaris as $actual){
     echo "Inserint l'usuari: \"{$actual['nom']}\" ";
-    $stm = $sql->prepare('insert into usuari (nom,telefon,correu,contrasenya,rol) values (:nom,:telefon,:correu,:contrasenya,:rol);');
-    $result = $stm->execute([':nom' => $actual["nom"],':telefon' => $actual["telefon"],':correu' =>$actual["correu"],':contrasenya'=>$actual["contrasenya"],':rol'=>$actual["rol"]]);
+    $hash = password_hash($actual["contrasenya"], PASSWORD_DEFAULT, ["cost" => 12]);
+    $usuaris->afegir($actual["nom"], $actual["correu"],$hash,$actual["telefon"]);
     echo "[ok]\n";
-
 }
+

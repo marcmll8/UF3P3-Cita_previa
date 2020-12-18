@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * ctrlogin function
+ *  controlador de login
+ * @param [type] $peticio
+ * @param [type] $resposta
+ * @param [type] $config
+ * @return void
+ */
 function ctrlogin($peticio, $resposta, $config)
 { 
   
@@ -11,7 +18,14 @@ function ctrlogin($peticio, $resposta, $config)
     $resposta->setSession("error", "");
 
     $resposta->SetTemplate("login.php");
+    $desc=$_POST["desconecta"];
 
+    if(isset($desc)){
+        $resposta->setSession("logat",false);
+        $resposta->setSession("usuari","");
+
+    }
+    
     return $resposta;
 
 }

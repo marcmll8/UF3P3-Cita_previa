@@ -7,11 +7,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../public/estilo.css">
+    <link rel="stylesheet" href="../public/index.css">
 
     <title>Inicio de Sesión</title>
   </head>
-  <body class="login">
+  <body class="bodyInici">
 
     <div class="container">
             <?php if (isset($error) && $error != "") {?>
@@ -19,18 +19,20 @@
                 <?=$error;?>
           </div>
             <?php }?>
+      <div class="pendiento2">
+        <h1 class="titulito2" >PERRUQUERIA MARC'S&KRIS</h1>
+      </div>
 
-            
       <div class="row justify-content-md-center">
         <div class="col-4  p-3">
-          <div class="card">
-            <div class="card-body">
+          <div class="card pendiento">
+            <div class="card-body ">
               <h5 class="card-title">INICIAR SESIÓN</h5>
               <p class="card-text">
-                <form action="index.php?r=validar-login" method="post">
+                <form action="index.php?r=validar-login" class=""method="post">
           
                   <div class="form-group">
-                    <label for="inputuUsuari">Usuari</label>
+                    <label for="inputuUsuari">Usuario</label>
                     <input name="usuari" type="text" class="form-control" id="inputUsuario" value="<?=$usuario;?>" placeholder="nombre de usuario">
 
                   </div>
@@ -38,14 +40,19 @@
                     <label for="inputContraseña">Contrasenya</label>
                     <input name="contrasenya" type="password" class="form-control" id="inputContraseña" value="<?=$contraseña;?>" placeholder="contraseña">
                   </div>
-                  <button type="submit" class="btn-2 btn-primary">Acceder</button>
+                  <button type="submit" class="btn btn-primary butonsito">Acceder</button>
+
+
                 </form>
-                 </div>
-                 </div>
-                  <div class="card">
+                </div>
+                </div>
+                </div>
+                <div class="row justify-content-md-center">
+                <div class="col-12  p-3">
+                  <div class="card pendiento2">
                     <div class="card-body">
                       <h5 class="card-title">REGISTRARSE</h5>
-                     
+                      <p class="card-text">
                         <form action="index.php?r=registrarse" method="post">
                   
                           <div class="form-group">
@@ -64,11 +71,11 @@
                             <label for="inputContraseña">Contrasenya</label>
                             <input name="contrasenya" type="password" class="form-control" id="inputContraseña" value="" placeholder="contrasenya">
                           </div>
-                          <button type="submit" class="btn-2 btn-primary">Registrarse</button>
+                          <button type="submit" class="btn btn-primary butonsito">Registrarse</button>
 
 
                   </form>
-          
+              </p>
           </div>          
         </div>
               </p>
