@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Emeset;
-
 
 /**
     * Emeset: objecte que encapsula l'aplicació web.
@@ -11,7 +9,8 @@ namespace Emeset;
     * executar l'aplicació.
     *
 **/
-class Emeset {
+class Emeset
+{
 
     public $ruter = null;
     public $config = [];
@@ -23,8 +22,4 @@ class Emeset {
         $this->config = $config;
         $this->constructor = $constructor;
     }
-
-    
-
-
 }

@@ -6,7 +6,7 @@
           Hola <?=$usuariLogat?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <?php if($usuariActual["rol"] == "admin") { ?>
+          <?php if ($usuariActual["rol"] == "admin") { ?>
             <a class="dropdown-item" href="index.php?r=usuaris">Editar usuaris</a>
           <?php } ?>  
           <a class="dropdown-item" href="index.php?r=login">Tancar la sessió</a>

@@ -38,11 +38,15 @@
                   <div class="form-group">
                     <label for="inputRol">Rol:</label><br>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="rol" id="rol1" value="admin" <?php if($usuari["rol"]=='admin'){ echo "checked='checked'"; } ?>)>
+                        <input class="form-check-input" type="radio" name="rol" id="rol1" value="admin" <?php if ($usuari["rol"] == 'admin') {
+                            echo "checked='checked'";
+                                                                                                        } ?>)>
                         <label class="form-check-label" for="rol1">Admin</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="rol" id="rol2" value="" <?php if($usuari["rol"]!='admin'){ echo "checked='checked' "; } ?>>
+                        <input class="form-check-input" type="radio" name="rol" id="rol2" value="" <?php if ($usuari["rol"] != 'admin') {
+                            echo "checked='checked' ";
+                                                                                                   } ?>>
                         <label class="form-check-label" for="rol2">Usuari</label>
                     </div>
                   </div>

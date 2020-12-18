@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ctrlEsborrarUsuaris function
  *  Controlador d'esborrar els usuaris
@@ -10,11 +11,8 @@
 function ctrlEsborrarUsuaris($peticio, $resposta, $config)
 {
     $delete = $peticio->get(INPUT_GET, "delete");
-    
     $usuaris = new usuariomodel($config["db"]);
     $usuaris->esborrar($delete);
-    
     $resposta->redirect("location: index.php?r=usuaris");
-    
     return $resposta;
 }

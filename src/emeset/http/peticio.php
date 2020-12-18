@@ -1,7 +1,5 @@
 <?php
 
-
-
 namespace Emeset\HTTP;
 
 /**
@@ -41,7 +39,7 @@ class Peticio
             $result = $_FILES[$id];
         } elseif ($input === INPUT_REQUEST) {
             $var = $_REQUEST[$id];
-            $result = filter_var($var,$filtre, $opcions);
+            $result = filter_var($var, $filtre, $opcions);
         } else {
             $result = filter_input($input, $id, $filtre, $opcions);
         }

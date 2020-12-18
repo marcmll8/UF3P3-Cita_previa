@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ctrlFestius function
  *  controlador dels festius
@@ -7,9 +8,9 @@
  * @param [type] $config
  * @return void
  */
-function ctrlFestius($peticio, $resposta,$config)
+function ctrlFestius($peticio, $resposta, $config)
 {
-    $festius=new festiusmodel($config["db"]);
+    $festius = new festiusmodel($config["db"]);
     $data = $peticio->get(INPUT_POST, "data");
     $festius->afegirfestiu($data);
     $resposta->set("error", $error);
@@ -17,5 +18,4 @@ function ctrlFestius($peticio, $resposta,$config)
     echo($data);
     $resposta->redirect("location: index.php?r=pendents");
     return $resposta;
-
 }

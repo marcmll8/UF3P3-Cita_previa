@@ -43,7 +43,7 @@ color: #D40005;
 }
 
 .calendari td{
-    color: gray; 
+    color: gray;
     border:1px solid black;
     transition: 0.8s;
 }
@@ -53,18 +53,18 @@ color: #D40005;
 .calendari td:hover{
     transition: 0.8s;
     background-color: #D40005;
-  
+
 }
 
 
 .calendari tr{
-    
-    border:1px solid black; 
+
+    border:1px solid black;
 }
 
 td{
     width: 13%;
-  
+
 }
 
 
@@ -80,11 +80,11 @@ td{
         margin-right: 5%;
         z-index: 1000;
         text-align: center;
-       
+
        background-color: #D1C7C9;
         color: #D40005;
         border-radius: 20px;
-       
+
     }
 .centered {
     position: relative;
@@ -107,19 +107,19 @@ td{
        background-color: #D1C7C9;
         color: #D40005;
         border-radius: 20px;
-       
+
     }
-   
- 
-   
+
+
+
 .bodyInici{
     background-image:url("../src/img/bgbarber.jpg");
-    
+
 }
     .pendiento td{
         border-bottom: 1px solid white;
     }
-   
+
     .butonsito{
         margin-left: 20px;
         background-color: #D40005 !important;

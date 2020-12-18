@@ -1,12 +1,12 @@
 <?php
+
 class usuariomodel
 {
 
     private $sql;
-
     public function __construct($config)
-    {    
-        $dsn = 'mysql:dbname='.$config["dbname"].';host='.$config["host"];
+    {
+        $dsn = 'mysql:dbname=' . $config["dbname"] . ';host=' . $config["host"];
         $usuario = $config["user"];
         $contrasenya = $config["pass"];
         try {
@@ -16,8 +16,8 @@ class usuariomodel
         }
     }
 
-  
-    public function afegir($usuario,$correu,$contrasenya,$telefon)
+
+    public function afegir($usuario, $correu, $contrasenya, $telefon)
     {
         $query = $this->sql->prepare('insert into usuari(nom,telefon,correu, contrasenya,rol) values(:nom,:telefon ,:correu, :contrasenya,"client");');
         $result = $query->execute([':nom' => $usuario,':telefon' => $telefon,':correu' => $correu,':contrasenya' => $contrasenya]);
@@ -28,7 +28,7 @@ class usuariomodel
         }
     }
 
-    
+
     public function esborrar($id)
     {
         $query = $this->sql->prepare('delete from usuari where id=:id;');
@@ -36,15 +36,15 @@ class usuariomodel
     }
 
 
-  
+
 
     public function consultar($usuario)
     {
         $tasques = array();
-        $query =$this->sql->prepare("select * from usuari where nom = :nom;");
-        $result= $query->execute([":nom"=> $usuario]);
-        $tasques=$query->fetch(\PDO::FETCH_ASSOC);
-        //print_r($tasques);
+        $query = $this->sql->prepare("select * from usuari where nom = :nom;");
+        $result = $query->execute([":nom" => $usuario]);
+        $tasques = $query->fetch(\PDO::FETCH_ASSOC);
+//print_r($tasques);
         return $tasques;
     }
     public function actualitzarClau($id, $clau)
@@ -60,24 +60,23 @@ class usuariomodel
     //
     public function existeix($usuario)
     {
-        
-        $stm=$this->sql->prepare('select count(*) from usuari where nom=:nom;');
-        $result = $stm->execute([":nom" =>$usuario]);
-     
-        return ((int)$stm->fetch()[0])!==0;
+
+        $stm = $this->sql->prepare('select count(*) from usuari where nom=:nom;');
+        $result = $stm->execute([":nom" => $usuario]);
+        return ((int)$stm->fetch()[0]) !== 0;
     }
 
-    //    
+    //
     public function llistatUsuarios()
     {
         $tasques = array();
         $query = "select * from usuari;";
         foreach ($this->sql->query($query, \PDO::FETCH_ASSOC) as $usuari) {
-            $tasques[]=$usuari;
+            $tasques[] = $usuari;
         }
         return $tasques;
     }
-    public function actualitzar($id, $correu, $telefon,$rol)
+    public function actualitzar($id, $correu, $telefon, $rol)
     {
         $query = $this->sql->prepare('update usuari set correu = :correu,telefon = :telefon, rol = :rol  where id = :id;');
         $result = $query->execute([':id' => $id, ":correu" => $correu,":telefon" => $telefon, ":rol" => $rol]);
